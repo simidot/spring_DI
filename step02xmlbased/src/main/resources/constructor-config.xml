@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="tapeReader"
+		class="dev.spring.step02constructor.TapeReader">
+		<constructor-arg name="tape" ref="tape"></constructor-arg>
+	</bean>
+
+	<bean id="tape" class="dev.spring.step02constructor.Tape">
+		<constructor-arg type="String" value="아일랜드"></constructor-arg>
+		<constructor-arg type="boolean" value="true"></constructor-arg>
+	</bean>
+</beans>
